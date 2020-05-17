@@ -216,6 +216,19 @@ namespace robotbit {
         return neoStrip;
     }
 
+    //% blockId=robotbit_pca9685_pwm block="Port|%index|pwm %pwm"
+    //% weight=85
+    //% pwm.min=0 pwm.max=4095
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=8
+    export function Pca9685Pwm(index: Servos, pwm: number): void {
+        if (!initialized) {
+            initPCA9685()
+        }
+        if (index > 8 || index <= 0)
+            return
+        setPwm(index + 7, 0, pwm)
+    }
+
     /**
      * Servo Execute
      * @param index Servo Channel; eg: S1

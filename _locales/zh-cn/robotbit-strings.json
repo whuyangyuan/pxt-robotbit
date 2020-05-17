@@ -1,4 +1,5 @@
 {
+    "robotbit.Pca9685Pwm|block": "端口|%index|PWM %pwm",
     "robotbit.Servo|block": "9g舵机|%index|角度 %degree",
     "robotbit.GeekServo|block": "Geekservo|9g舵机|%index|角度 %degree",
     "robotbit.GeekServo2KG|block": "2KG舵机|%index|角度 %degree",
