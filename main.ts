@@ -226,6 +226,12 @@ namespace robotbit {
         }
         if (index > 8 || index <= 0)
             return
+	if (pwm < 0) {
+	    pwm = 0
+	} 
+	if (pwm > 4095) {
+	    pwm = 4095
+	}
         setPwm(index + 7, 0, pwm)
     }
 
